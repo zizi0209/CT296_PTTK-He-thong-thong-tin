@@ -1,0 +1,31 @@
+{
+  "name": "bpm",
+  "version": "1.0.0",
+  "description": "bpmn-js bundling starter",
+  "private": true,
+  "scripts": {
+    "all": "run-s build build:es5",
+    "build": "webpack --config webpack.config.js",
+    "build:watch": "webpack --config webpack.config.js --watch",
+    "build:es5": "webpack --config webpack.es5.config.js",
+    "open": "open-cli ./public/index.html",
+    "dev": "run-p build:watch open"
+  },
+  "keywords": [
+    "bpmnjs"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bpmn-js": "^18.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "npm-run-all2": "^8.0.4",
+    "open-cli": "^8.0.0",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  }
+}
